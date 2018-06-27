@@ -1,14 +1,48 @@
 <ion-header>
   <ion-navbar>
-    <ion-title>
-      Ionic Blank
+    <ion-title style="background-color: orange">
+      Court Counter
     </ion-title>
   </ion-navbar>
 </ion-header>
 
 <ion-content padding>
-  The world is your oyster.
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will be your guide.
-  </p>
+    <ion-grid>
+        <ion-row>
+          <ion-col>
+            <h2>TEAM A</h2>
+            <ion-item>
+                <div id = score1>{{value1}}</div><br>
+            </ion-item>
+            <button  block color= orange id = "button1" ion-button  (click) = "onClick('1')" >FREE THROW</button><br>
+            <button block color= orange id = "button2" ion-button  (click) = "onClick('2')">+2 POINTS</button><br>
+            <button block color= orange id = "button3" ion-button  (click) = "onClick('3')">+3 POINTSM</button><br>
+          </ion-col>
+          <div id = "line"></div>
+          <ion-col>
+            <h2>TEAM B</h2>
+            <ion-item>
+                <div id = score1>{{value2}}</div><br>
+            </ion-item>
+            <button block color= orange id = "button1" ion-button  (click) = "onClick('4')">FREE THROW</button><br>
+            <button block color= orange id = "button2" ion-button  (click) = "onClick('5')">+2 POINTS</button><br>
+            <button block color= orange id = "button3" ion-button  (click) = "onClick('6')">+3 POINTSM</button><br>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+            <button id="reset" style="text-align: center"  color= orange ion-button (click) = "onClick('reset')">RESET</button>
+        </ion-row>
+      </ion-grid>
 </ion-content>
+<!--<ion-col col-12>TEAM A</ion-col>
+    
+          <ion-item>
+              <div id = score1>{{value}}</div><br>
+          </ion-item>
+            <button id = "button1" ion-button  (click) = "onClick1()">FREE THROW</button><br>
+            <button id = "button2" ion-button  (click) = "onClick2()">+2 POINTS</button><br>
+            <button id = "button3" ion-button  (click) = "onClick3()">+3 POINTSM</button><br>
+          
+      
+    
+   <button ion-button (click) = "onClick3()">RESET</button>-->
